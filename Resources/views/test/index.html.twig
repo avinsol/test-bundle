@@ -1,0 +1,26 @@
+{% extends '@AvinsolTest/base.html.twig' %}
+
+{% block body %}
+<div class="topnav">
+{% for menu in topMenu %}
+	{% set urlT = "avinsol_test_"~menu %}
+	<a href="{{ url(urlT)}}" {% if item == menu %} style="color:yellow;" {% endif %}>{{ menu }}</a>
+{% endfor %}
+</div>
+
+<div class="sidenav">
+{% for key in sideMenu|keys %}
+	{% if item == key %}
+		{% for menu in sideMenu[key] %}	  
+			<a href="#">{{ menu }}</a>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+</div>
+
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+</div>
+
+{% endblock %}
