@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Avinsol\TestBundle;
+namespace Avinsol\TestBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
